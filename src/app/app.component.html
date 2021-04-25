@@ -1,1 +1,25 @@
-<router-outlet></router-outlet>
+<!--Aqui vai o conteúdo do SideNav-->
+<mat-sidenav-container class="example-container">
+    <mat-sidenav mode="side" #sidenav opened="true" role="navigation">
+        <p>I'm the sidenav bar</p>
+    </mat-sidenav>
+
+    <!--Aqui vai o conteúdo fora do sidenav-->
+    <mat-sidenav-content>
+        <mat-toolbar color="primary">
+            <button mat-raised-button color="accent" (click)="sidenav.toggle()">Toggle Sidenav</button>
+            <div>LOGO</div>
+            <div>
+                <a routerLink="/signup">Signup</a>
+                <a routerLink="/login">Login</a>
+                <a routerLink="/training">Training</a>
+            </div>
+        </mat-toolbar>
+        
+
+        <main>
+            <router-outlet></router-outlet>
+        </main>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+

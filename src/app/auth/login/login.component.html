@@ -1,1 +1,13 @@
-<p>login works!</p>
+<section>
+    <form fxLayoutAlign="center center" fxLayout="column" fxLayoutGap="10px" #f="ngForm" (ngSubmit)="onSubmit(f)" style="margin-top: 30px;">
+        <mat-form-field>
+            <input matInput ngModel name="email" email required #email="ngModel" placeholder="E-mail">
+            <mat-hint>Enter your e-mail</mat-hint>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput ngModel name="senha" required #password="ngModel" placeholder="Password" type="password">
+            <mat-hint>Enter your password</mat-hint>
+        </mat-form-field>
+        <button mat-raised-button type="submit" color="primary">Login</button>
+    </form>
+</section>
